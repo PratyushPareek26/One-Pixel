@@ -7,7 +7,7 @@ from keras.preprocessing.image import ImageDataGenerator
 from keras.layers import Conv2D, Dense, Input, add, Activation, AveragePooling2D, GlobalAveragePooling2D
 from keras.layers import Lambda, concatenate
 from keras.initializers import he_normal
-from keras.layers.merge import Concatenate
+from keras.layers import Concatenate #from keras.layers.merge import Concatenate
 from keras.callbacks import LearningRateScheduler, TensorBoard, ModelCheckpoint
 from keras.models import Model, load_model
 from keras import optimizers
