@@ -46,6 +46,7 @@ class LeNet:
 
     def build_model(self):
         model = Sequential()
+        model.add(tf.keras.layers.Dense(256, input_shape=(x_train.shape[1],), activation='sigmoid'))
         model.add(Conv2D(6, (5, 5), padding='valid', activation = 'relu', kernel_initializer='he_normal', kernel_regularizer=l2(self.weight_decay), input_shape=self.input_shape))
         model.add(MaxPooling2D((2, 2), strides=(2, 2)))
         model.add(Conv2D(16, (5, 5), padding='valid', activation = 'relu', kernel_initializer='he_normal', kernel_regularizer=l2(self.weight_decay)))
